@@ -11,9 +11,23 @@
             padding: 0;
             overflow: hidden;
             background-color: #303436;
+            height: 100%;
+            overflow: auto;
+        }
+        
+        #large-container {
+            width: 100%;
+            height: 2300px;
+            overflow: hidden;
+        }
+        
+        #scroll-container {
+            width: calc(100%);
+            height: calc(100vh);
+            overflow: auto;
         }
     </style>
-
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172835885-1"></script>
     <script>
@@ -23,11 +37,18 @@
         
         gtag('config', 'UA-172835885-1');
     </script>
-
 </head>
-<body>
-    <div id="container"></div>
-    <script src="LCKM.js">
+<body onresize="myfunc">
+    <div id="scroll-container">
+        <div id="large-container">
+            <div id="container"></div>
+        </div>
+    </div>
+    <script type="application/javascript" src="./js/LCKM.js"></script>
+    <script>
+        function myfunc() {
+            console.log("fuckdjfkdjf");
+        }
     </script>
 </body>
 </html>
